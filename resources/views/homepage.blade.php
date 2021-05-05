@@ -78,70 +78,21 @@
 <div class="sm-pull-top-0px">
     <div class="container">
         <div class="row">
-
-            <!-- item -->
-            <div class="col-lg-3 col-md-6">
-                <div class="pull-top-190px sm-pull-top-0px icon-text layout-6 wow flipInX" data-wow-delay="0.2s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/icon_1.svg')}}" alt="">
-                    </div>
-                    <h3><a href="#" class="link">Tamamen Ücretsiz</a></h3>
-                    <div class="icon-hover">
-                        <h3><a href="#" class="link">Tamamen Ücretsiz</a></h3>
-                        <div class="text">Tamamen ücretsiz açık kaynak projeler, modeller ve bilgilendirici bloglar.</div>
-                        <a class="more" href="#">Detaylar</a>
-                    </div>
-                </div>
-            </div>
-            <!--// end -->
-
-            <!-- item -->
-            <div class="col-lg-3 col-md-6">
-                <div class="pull-top-160px sm-pull-top-0px icon-text layout-6 wow flipInX" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/icon_2.svg')}}" alt="">
-                    </div>
-                    <h3><a href="#" class="link">Açık Kaynak (OpenSource)</a></h3>
-                    <div class="icon-hover">
-                        <h3><a href="#" class="link">Açık Kaynak Yazılımlar</a></h3>
-                        <div class="text">Tamamen açık kaynak yazılımlar, temiz kod yapısı.</div>
-                        <a class="more" href="#">Detaylar</a>
+            @foreach ($features as $feature)
+                <div class="col-lg-3 col-md-6">
+                    <div class="@if ($loop->index == 0) pull-top-190px @elseif ($loop->index == 1) pull-top-160px @elseif ($loop->index == 2) pull-top-130px @elseif ($loop->index == 3) pull-top-100px @elseif ($loop->index == 4) pull-top-90px @elseif ($loop->index == 5) pull-top-60px @elseif ($loop->index == 6) pull-top-30px @endif @if ($loop->index != 7) sm-pull-top-0px @endif icon-text layout-6 wow flipInX" data-wow-delay="0.2s">
+                        <div class="icon">
+                            <img src="{{asset($feature->icon)}}" alt="{{$feature->title}}">
+                        </div>
+                        <h3><a href="#" class="link">{{$feature->title}}</a></h3>
+                        <div class="icon-hover">
+                            <h3><a href="#" class="link">{{$feature->alttitle}}</a></h3>
+                            <div class="text">{{$feature->desc}}</div>
+                            <a class="more" href="{{$feature->redirect}}">Detaylar</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--// end -->
-
-            <!-- item -->
-            <div class="col-lg-3 col-md-6">
-                <div class="pull-top-130px sm-pull-top-0px icon-text layout-6 wow flipInX" data-wow-delay="0.6s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/icon_5.svg')}}" alt="">
-                    </div>
-                    <h3><a href="#" class="link">3d Model</a></h3>
-                    <div class="icon-hover">
-                        <h3><a href="#" class="link">3d Model</a></h3>
-                        <div class="text">3d Modeller, bilgilendirici blog yazıları ve ücretsiz dosya paylaşımı</div>
-                        <a class="more" href="#">Detaylar</a>
-                    </div>
-                </div>
-            </div>
-            <!--// end -->
-
-            <!-- item -->
-            <div class="col-lg-3 col-md-6">
-                <div class="pull-top-100px sm-pull-top-0px icon-text layout-6 wow flipInX" data-wow-delay="0.8s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/icon_4.svg')}}" alt="">
-                    </div>
-                    <h3><a href="#" class="link">Güncel & Popüler Teknolojiler</a></h3>
-                    <div class="icon-hover">
-                        <h3><a href="#" class="link">Yeni ve Güncel Teknolojiler</a></h3>
-                        <div class="text">Projelerde kullanılan teknolojilerin tamamı güncel ve popüler teknolojilerden oluşmaktadır.</div>
-                        <a class="more" href="#">Detaylar</a>
-                    </div>
-                </div>
-            </div>
-            <!--// end -->
+            @endforeach
         </div>
     </div>
 </div>
@@ -459,9 +410,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </section>
 
