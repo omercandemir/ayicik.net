@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             FeaturesSeeder::class,
             WhoSeeder::class,
             SupportSeeder::class,
+            FeedbackSeeder::class,
         ]);
     }
 }

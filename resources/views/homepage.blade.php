@@ -214,8 +214,6 @@
 
 <section class="padding-tb-50px sm-ptb-35px section-ba-1">
     <div class="container">
-
-        <!-- Title -->
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="firo-title dark text-center wow zoomIn" data-wow-delay="0.2s">
@@ -225,107 +223,22 @@
                 </div>
             </div>
         </div>
-        <!-- END Title -->
-
-
-
         <div class="testimonial-carousel owl-carousel owl-theme wow zoomIn" data-wow-delay="0.4s">
-
-            <!-- item -->
+            @foreach ($feedbacks as $feedback)
             <div class="item margin-lr-15px">
                 <div class="testimonial-item layout-3">
                     <div class="text-content box-shadow">
-                        Salma’s analysts have done an excellent job presenting the analysis and insights. I am confident in saying that they have helped move our business forward
+                        {{$feedback->desc}}
                         <div class="icon"></div>
                     </div>
                     <div class="img-in">
-                        <img src="{{asset('assets/img/zoal-1.jpg')}}" alt="">
+                        <img src="{{asset('assets/img/teddyBear.png')}}" alt="Ayıcık.net feedback">
                     </div>
-                    <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-                    <small>Banda Co.ltd</small>
+                    <h4 class="margin-bottom-0px">{{$feedback->name}}</h4>
+                    <small>{{$feedback->job}}</small>
                 </div>
             </div>
-            <!-- END item -->
-
-            <!-- item -->
-            <div class="item margin-lr-15px">
-                <div class="testimonial-item layout-3">
-                    <div class="text-content box-shadow">
-                        Salma’s analysts have done an excellent job presenting the analysis and insights. I am confident in saying that they have helped move our business forward
-                        <div class="icon"></div>
-                    </div>
-                    <div class="img-in">
-                        <img src="{{asset('assets/img/zoal-2.jpg')}}" alt="">
-                    </div>
-                    <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-                    <small>Banda Co.ltd</small>
-                </div>
-            </div>
-            <!-- END item -->
-
-            <!-- item -->
-            <div class="item margin-lr-15px">
-                <div class="testimonial-item layout-3">
-                    <div class="text-content box-shadow">
-                        Salma’s analysts have done an excellent job presenting the analysis and insights. I am confident in saying that they have helped move our business forward
-                        <div class="icon"></div>
-                    </div>
-                    <div class="img-in">
-                        <img src="{{asset('assets/img/zoal-3.jpg')}}" alt="">
-                    </div>
-                    <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-                    <small>Banda Co.ltd</small>
-                </div>
-            </div>
-            <!-- END item -->
-
-            <!-- item -->
-            <div class="item margin-lr-15px">
-                <div class="testimonial-item layout-3">
-                    <div class="text-content box-shadow">
-                        Salma’s analysts have done an excellent job presenting the analysis and insights. I am confident in saying that they have helped move our business forward
-                        <div class="icon"></div>
-                    </div>
-                    <div class="img-in">
-                        <img src="{{asset('assets/img/zoal-1.jpg')}}" alt="">
-                    </div>
-                    <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-                    <small>Banda Co.ltd</small>
-                </div>
-            </div>
-            <!-- END item -->
-
-            <!-- item -->
-            <div class="item margin-lr-15px">
-                <div class="testimonial-item layout-3">
-                    <div class="text-content box-shadow">
-                        Salma’s analysts have done an excellent job presenting the analysis and insights. I am confident in saying that they have helped move our business forward
-                        <div class="icon"></div>
-                    </div>
-                    <div class="img-in">
-                        <img src="{{asset('assets/img/zoal-2.jpg')}}" alt="">
-                    </div>
-                    <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-                    <small>Banda Co.ltd</small>
-                </div>
-            </div>
-            <!-- END item -->
-
-            <!-- item -->
-            <div class="item margin-lr-15px">
-                <div class="testimonial-item layout-3">
-                    <div class="text-content box-shadow">
-                        Salma’s analysts have done an excellent job presenting the analysis and insights. I am confident in saying that they have helped move our business forward
-                        <div class="icon"></div>
-                    </div>
-                    <div class="img-in">
-                        <img src="{{asset('assets/img/zoal-3.jpg')}}" alt="">
-                    </div>
-                    <h4 class="margin-bottom-0px">Rabie Elkheir</h4>
-                    <small>Banda Co.ltd</small>
-                </div>
-            </div>
-            <!-- END item -->
+            @endforeach
         </div>
     </div>
 </section>
