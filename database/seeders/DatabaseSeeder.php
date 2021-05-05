@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FeaturesSeeder::class,
             WhoSeeder::class,
+            SupportSeeder::class,
         ]);
     }
 }

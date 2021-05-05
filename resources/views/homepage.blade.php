@@ -127,7 +127,7 @@
     </div>
 </section>
 
-
+<!--
 <section class="padding-tb-50px sm-ptb-35px section-ba-2">
     <div class="container">
         <div class="row justify-content-center">
@@ -209,7 +209,7 @@
         </div>
     </div>
 </section>
-
+-->
 
 
 <section class="padding-tb-50px sm-ptb-35px section-ba-1">
