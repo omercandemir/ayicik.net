@@ -112,39 +112,17 @@
         </div>
         <!-- END Title -->
         <div class="row">
-            <!-- Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-text layout-7 wow zoomIn" data-wow-delay="0.2s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/why_1.svg')}}" alt="">
+            @foreach ($whos as $who)
+                <div class="col-lg-4 col-md-6">
+                    <div class="icon-text layout-7 wow zoomIn" data-wow-delay="0.2s">
+                        <div class="icon">
+                            <img src="{{asset($who->icon)}}" alt="{{$who->title}}">
+                        </div>
+                        <h3><a href="#" class="link">{{$who->title}}</a></h3>
+                        <div class="text">{{$who->desc}}</div>
                     </div>
-                    <h3><a href="#" class="link">Farklı Dallardan Öğrenciler</a></h3>
-                    <div class="text">Biz farklı alanlarda projeler geliştiren öğrenciler ve öğrenci topluluğuyuz.</div>
                 </div>
-            </div>
-            <!-- END Item -->
-            <!-- Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-text layout-7 wow zoomIn" data-wow-delay="0.4s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/why_2.svg')}}" alt="">
-                    </div>
-                    <h3><a href="#" class="link">İnsanlara Birşeyler Katmaya Çalışan Topluluk</a></h3>
-                    <div class="text">İnsanlara farkı alanlarda birşeyler katmaya çalışan, hedeflerimiz doğrultusunda ilerleyen kişileriz.</div>
-                </div>
-            </div>
-            <!-- END Item -->
-            <!-- Item -->
-            <div class="col-lg-4 col-md-6">
-                <div class="icon-text layout-7 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="icon">
-                        <img src="{{asset('assets/icons/tech/why_3.svg')}}" alt="">
-                    </div>
-                    <h3><a href="#" class="link">Fikirleri Projelendiren Bir Ekip</a></h3>
-                    <div class="text">Fikirlerimizi projelendirmeye çalışan ve bu doğrultuda ilerleyen bir ekibiz!</div>
-                </div>
-            </div>
-            <!-- END Item -->
+            @endforeach
         </div>
     </div>
 </section>
