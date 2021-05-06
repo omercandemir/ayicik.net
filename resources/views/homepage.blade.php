@@ -40,7 +40,7 @@
 <!-- // Get A Quote  -->
 
 <!-- REVOLUTION SLIDER -->
-<div class="pull-top-80px">
+<div class="pull-top-80px" id="about">
 
     <div id="rev_slider_13_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="salma-3" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
         <!-- START REVOLUTION SLIDER 5.4.8.1 fullwidth mode -->
@@ -98,7 +98,7 @@
 </div>
 <!-- End Icons & Text  -->
 
-<section class="padding-tb-50px sm-ptb-35px section-ba-1">
+<section class="padding-tb-50px sm-ptb-35px section-ba-1" id="who">
     <div class="container">
         <!-- Title -->
         <div class="row justify-content-center">
