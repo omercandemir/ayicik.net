@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             WhoSeeder::class,
             SupportSeeder::class,
             FeedbackSeeder::class,
+            BlogSeeder::class,
         ]);
     }
 }
