@@ -104,7 +104,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="firo-title dark text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="sub-title text-second-color">Ayıcık.Net</div>
+                    <div class="sub-title text-second-color">Ayicik.Net</div>
                     <h2 class="title">Biz Kimiz ?</h2>
                     <div class="description">Farklı Dallardan Öğrenciler, İnsanlara Birşeyler Katmaya Çalışan Topluluk, Fikirleri Projelendiren Bir Ekip</div>
                 </div>
@@ -217,7 +217,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="firo-title dark text-center wow zoomIn" data-wow-delay="0.2s">
-                    <div class="sub-title text-second-color">Ayıcık.Net</div>
+                    <div class="sub-title text-second-color">Ayicik.Net</div>
                     <h2 class="title">Geri Bildirimler ve Yorumlar (Feedback)</h2>
                     <div class="description"><a href="#" style="color: #6b4dac;">Buraya tıklayarak</a> geri bildiriminizi herkese açık bir şekilde gönderebilirsiniz.</div>
                 </div>
@@ -232,7 +232,7 @@
                         <div class="icon"></div>
                     </div>
                     <div class="img-in">
-                        <img src="{{asset('assets/img/teddyBear.png')}}" alt="Ayıcık.net feedback">
+                        <img src="{{asset('assets/img/teddyBear.png')}}" alt="Ayicik.Net feedback">
                     </div>
                     <h4 class="margin-bottom-0px">{{$feedback->name}}</h4>
                     <small>{{$feedback->job}}</small>
@@ -250,8 +250,8 @@
         <div class="row justify-content-center">
             <div class="col-lg-7">
                 <div class="firo-title dark text-center wow fadeInUp" data-wow-delay=".2s">
-                    <div class="sub-title text-second-color">Ayıcık.Net News</div>
-                    <h2 class="title">Ayıcık.Net Son Blog Yazıları</h2>
+                    <div class="sub-title text-second-color">Ayicik.Net News</div>
+                    <h2 class="title">Ayicik.Net Son Blog Yazıları</h2>
                 </div>
             </div>
         </div>

@@ -23,9 +23,9 @@ class SettingsFactory extends Factory
     {
         return [
             'name'      => 'Ayicik.Net',
-            'desc'      => 'Ayıcık.Net topluma birşeyler katmaya çalışan, fikirleri projelendiren ve open source fikrini benimsemiş her alandan öğrencileri birleştiren bir öğrenci topluluğudur.',
+            'desc'      => 'Ayicik.Net topluma birşeyler katmaya çalışan, fikirleri projelendiren ve open source fikrini benimsemiş her alandan öğrencileri birleştiren bir öğrenci topluluğudur.',
             'en_desc'   => 'Ayicik.Net is a student community that tries to add something to the society, projects ideas and unites students from all fields who have adopted the open source idea.',
-            'slogan'    => 'Ayıcık.Net Slogan',
+            'slogan'    => 'Ayicik.Net Slogan',
             'en_slogan' => 'Ayicik.Net Slogan',
             'email'     => 'contact@ayicik.net',
         ];
