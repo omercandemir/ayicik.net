@@ -35,7 +35,7 @@
                             </div>
                             <div class="content">
                                 <h5><a href="#">{{$blogDetail->authorDetail->name}}</a></h5>
-                                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <p>{{$blogDetail->authorDetail->about}}</p>
                                 <!--  Social -->
                                 <ul class="social-media list-inline margin-0px">
                                     <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>

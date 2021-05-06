@@ -14,4 +14,8 @@ class Blog extends Model
     {
         return $this->hasOne(User::class, 'id', 'author');
     }
+    public function blogDetail()
+    {
+        return $this->hasOne(BlogCategory::class, 'id', 'category');
+    }
 }
