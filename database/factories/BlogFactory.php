@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Blog;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class BlogFactory extends Factory
 {
@@ -21,11 +22,13 @@ class BlogFactory extends Factory
      */
     public function definition()
     {
+        $name = $this->faker->company;
         return [
-            'title'   => $this->faker->company,
+            'title'   => $name,
             'content' => $this->faker->text,
             'author'  => 1,
-            'image'   => 'assets/img/blog-2.jpg' 
+            'image'   => 'assets/img/blog-2.jpg', 
+            'slug'    => Str::slug($name),
         ];
     }
 }

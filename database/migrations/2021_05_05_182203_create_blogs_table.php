@@ -20,6 +20,7 @@ class CreateBlogsTable extends Migration
             $table->integer('category')->nullable();
             $table->integer('author');
             $table->string('image');
+            $table->string('slug');
             $table->timestamps();
         });
     }
