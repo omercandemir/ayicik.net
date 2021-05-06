@@ -11,23 +11,18 @@
         </div>
     </div>
     <!-- End Page Title -->
-
-
     <div class="page-output background-white padding-tb-100px">
         <div class="container">
             <div class="row">
-
-
                 <div class="col-lg-8">
                     <div class="img-in margin-bottom-30px">
-                        <img class="border-radius-8 box-shadow" src="http://placehold.it/1050x700" alt="">
+                        <img class="border-radius-8 box-shadow" src="{{asset($blogDetail->image)}}" width="730" height="490" alt="{{$blogDetail->title}}">
                     </div>
                     <div class="entry-content clearfix">
                         <div class="post-entry">
                             <p>{{$blogDetail->content}}</p>
                         </div>
                     </div>
-
                     <div class="firo-author-content">
                         <div class="output">
                             <div class="author-img">
@@ -35,7 +30,11 @@
                             </div>
                             <div class="content">
                                 <h5><a href="#">{{$blogDetail->authorDetail->name}}</a></h5>
-                                <p>{{$blogDetail->authorDetail->about}}</p>
+                                @if ($blogDetail->authorDetail->about == null)
+                                    <p>Henüz bir bilgi girilmemiş.</p>
+                                @else
+                                    <p>{{$blogDetail->authorDetail->about}}</p>
+                                @endif
                                 <!--  Social -->
                                 <ul class="social-media list-inline margin-0px">
                                     <li class="list-inline-item"><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -148,66 +147,29 @@
                             </p>
                         </form>
                     </div>
-
-
                 </div>
-
-
                 <div class="col-lg-4">
                     <div id="firo-sidebar" class="firo-sidebar">
-
-                        <!-- Search -->
-                        <div class="nile-widget layout-1 widget_search">
-                            <div class="title font-2 text-main-color">Search</div>
-                            <form role="search" method="get" class="search-form box-shadow" action="#">
-                                <input type="search" class="search-field" placeholder="Search..." value="" name="s" title="Search for:" required="">
-                                <input type="submit" class="search-submit" value="Search">
-                            </form>
-                        </div>
-                        <!-- End Search -->
-
                         <!-- Latest Posts -->
                         <div class="nile-widget layout-1 firo_latest_news_widget">
                             <div class="title font-2 text-main-color">Latest Posts</div>
 
-                            <!-- post item -->
+                            @foreach($blogs as $blog)
                             <div class="post">
-                                <div class="post-thum"><a href="#"><img src="assets/img/post-1.jpg" alt=""></a></div>
-                                <div class="date"><span class="icon_clock_alt"></span> May 22, 2018</div>
-                                <a href="#" class="title">7 Ways to Stimulate Creative Thinking</a>
+                                <div class="post-thum"><a href="#"><img src="{{asset($blog->image)}}" alt="{{$blog->title}}" height="50px"></a></div>
+                                <div class="date"><span class="icon_clock_alt"></span> {{$blog->created_at}}</div>
+                                <a href="{{route('blog.detail', $blog->slug)}}" class="title">{{$blog->title}}</a>
                             </div>
-                            <!-- END post item -->
-
-                            <!-- post item -->
-                            <div class="post">
-                                <div class="post-thum"><a href="#"><img src="assets/img/post-2.jpg" alt=""></a></div>
-                                <div class="date"><span class="icon_clock_alt"></span> May 22, 2018</div>
-                                <a href="#" class="title">Fun and Family Stimulates Creative Thinking</a>
-                            </div>
-                            <!-- END post item -->
-
-                            <!-- post item -->
-                            <div class="post">
-                                <div class="post-thum"><a href="#"><img src="assets/img/post-3.jpg" alt=""></a></div>
-                                <div class="date"><span class="icon_clock_alt"></span> May 22, 2018</div>
-                                <a href="#" class="title">4 Factors to Consider While Choosing Right PRP Kit</a>
-                            </div>
-                            <!-- END post item -->
-
-                            <!-- post item -->
-                            <div class="post">
-                                <div class="post-thum"><a href="#"><img src="assets/img/post-4.jpg" alt=""></a></div>
-                                <div class="date"><span class="icon_clock_alt"></span> May 22, 2018</div>
-                                <a href="#" class="title">How EcoAllene Can Stimulate Sales of Personalised Pens</a>
-                            </div>
-                            <!-- END post item -->
+                            @endforeach
                         </div>
                         <!-- End Latest Posts -->
                         <!-- widget categories -->
                         <div class="nile-widget layout-1 widget_categories">
                             <div class="title font-2 text-main-color">Kategoriler</div>
                             <ul>
-                                <li><a href="#">Kategori ismi</a></li> 
+                                @foreach ($categories as $category)
+                                    <li><a href="#">{{$category->title}}</a></li>
+                                @endforeach 
                             </ul>
                         </div>
                         <!-- End widget categories -->
