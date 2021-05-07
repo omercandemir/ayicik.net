@@ -3,7 +3,7 @@
 <html lang="{{App::currentLocale()}}">
 
 <head>
-    <title>Ayıcıklarla Dolu Bir Dünya | Anasayfa</title>
+    <title>@yield('title')</title>
     <meta name="author" content="Ömercan">
     <meta name="robots" content="index follow">
     <meta name="googlebot" content="index follow">
@@ -67,6 +67,7 @@
                              <li class="has-dropdown">
                                 <a href="#">Blog</a>
                                 <ul class="sub-menu">
+                                    <li><a href="{{route('blog.index')}}">Tüm Bloglar</a></li>
                                    <li><a href="#">Yazılım</a></li>
                                    <li><a href="#">3d Modelleme</a></li>
                                    <li><a href="#">Duyurular</a></li>

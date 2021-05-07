@@ -11,8 +11,14 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $blogs = Blog::orderBy('id', 'desc')->paginate(8);
-        return 'bloglar sayfası';
+        $settings = Settings::first();
+        $blogs = Blog::with('blogDetail')->orderBy('id', 'desc')->paginate(8);
+        $categories = BlogCategory::inRandomOrder()->limit(12)->get();
+        return view('blog-list', [
+            'settings'   => $settings,
+            'blogs'      => $blogs,
+            'categories' => $categories,
+        ]);
     }
 
     public function show($slug)
