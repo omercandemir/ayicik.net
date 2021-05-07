@@ -58,7 +58,7 @@
                              <li class="has-dropdown">
                                 <a href="#">Projeler</a>
                                 <ul class="sub-menu">
-                                    <li><a href="#">Web Yazılım</a></li>
+                                    <li><a href="{{route('project.index')}}">Tüm Projeler</a></li>
                                     <li><a href="#">3d Modelleme</a></li>
                                     <li><a href="#">Grafik / Tasarım</a></li>
                                 </ul>
