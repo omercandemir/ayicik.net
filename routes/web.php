@@ -20,3 +20,4 @@ Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.detail');
 
 Route::get('project', [ProjectController::class, 'index'])->name('project.index');
+Route::get('project/{slug}', [ProjectController::class, 'show'])->name('project.detail');

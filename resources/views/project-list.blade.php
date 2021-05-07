@@ -19,11 +19,11 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
-                    @foreach ($blogs as $blog)
+                    @foreach ($projects as $project)
                         <div class="col-lg-6 col-md-6">
                             <div class="firo-blog-entry layout-1 margin-bottom-35px">
                                 <div class="img-in">
-                                    <img src="{{asset($blog->image)}}" alt="{{$blog->title}}">
+                                    <img src="{{asset($project->image)}}" alt="{{$project->title}}">
                                     <!--  Social -->
                                     <ul class="social-media">
                                         <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -33,13 +33,13 @@
                                     </ul>
                                     <!-- // Social -->
                                 </div>
-                                @if ($blog->blogDetail == null)
+                                @if ($project->projectCategory == null)
                                 @else
-                                    <div class="cats"><a href="#">{{$blog->blogDetail->title}}</a></div>
+                                    <div class="cats"><a href="#">{{$project->projectCategory->title}}</a></div>
                                 @endif
-                                <a href="{{route('blog.detail', $blog->slug)}}" class="title font-2">{{$blog->title}}</a>
-                                <p>@if (strlen($blog->content) > 85) {{substr($blog->content, 0, 84)}}.... @else {{$blog->content}} @endif</p>
-                                <a href="{{route('blog.detail', $blog->slug)}}" class="read_more">Detaylar</a>
+                                <a href="{{route('project.detail', $project->slug)}}" class="title font-2">{{$project->title}}</a>
+                                <p>@if (strlen($project->content) > 85) {{substr($project->content, 0, 84)}}.... @else {{$project->content}} @endif</p>
+                                <a href="{{route('project.detail', $project->slug)}}" class="read_more">Detaylar</a>
                             </div>
                         </div>
                     @endforeach
@@ -47,7 +47,7 @@
                 <!-- pagination -->
                 <div class="margin-tb-30px">
                     <ul class="pagination pagination-md pagination-style-1 color">
-                        {{$blogs->onEachSide(1)->links()}}
+                        {{$projects->onEachSide(1)->links()}}
                     </ul>
                 </div>
                 <!-- // pagination -->
