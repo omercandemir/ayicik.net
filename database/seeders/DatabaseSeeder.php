@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             SettingsSeeder::class,
             BlogCategorySeeder::class,
             ProjectSeeder::class,
+            ProjectCategorySeeder::class,
         ]);
     }
 }
