@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    {{$blog->title}} | Ayicik.Net
+    {{$blogDetail->title}} | Ayicik.Net
 @endsection
 @section('content')
     <!-- Page Title -->
