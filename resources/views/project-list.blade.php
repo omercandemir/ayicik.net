@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    Tüm Yazılar | Ayicik.Net
+    Tüm Projeler | Ayicik.Net
 @endsection
 @section('content')
 <div class="page-title layout-1">
