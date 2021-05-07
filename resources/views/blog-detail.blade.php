@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    {{$blog->title}} | Ayicik.Net
+@endsection
 @section('content')
     <!-- Page Title -->
     <div class="page-title layout-1">

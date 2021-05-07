@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    Tüm Yazılar | Ayicik.Net
+@endsection
 @section('content')
 <div class="page-title layout-1">
     <div class="container clearfix">

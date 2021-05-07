@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+    Anasayfa | Ayicik.Net
+@endsection
 @section('content')
 <!-- REVOLUTION SLIDER -->
 <div class="pull-top-80px" id="about">
