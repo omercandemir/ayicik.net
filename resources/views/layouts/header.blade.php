@@ -53,26 +53,10 @@
                        </div>
                        <div class="col-lg-7 col-md-12 position-inherit">
                           <ul id="menu-main" class="nav-menu float-xl-left text-lg-center link-padding-tb-25px dropdown-light">
-                             <li>
-                                <a href="{{route('home.index')}}">Anasayfa</a></li>
-                             <li class="has-dropdown">
-                                <a href="#">Projeler</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{{route('project.index')}}">Tüm Projeler</a></li>
-                                    <li><a href="#">3d Modelleme</a></li>
-                                    <li><a href="#">Grafik / Tasarım</a></li>
-                                </ul>
-                             </li>
-                             <li><a href="#">Hakkımızda</a></li>
-                             <li class="has-dropdown">
-                                <a href="#">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="{{route('blog.index')}}">Tüm Bloglar</a></li>
-                                   <li><a href="#">Yazılım</a></li>
-                                   <li><a href="#">3d Modelleme</a></li>
-                                   <li><a href="#">Duyurular</a></li>
-                                </ul>
-                             </li>
+                            <li><a href="{{route('home.index')}}">Anasayfa</a></li>
+                            <li><a href="{{route('project.index')}}">Projeler</a></li>
+                            <li><a href="#">Hakkımızda</a></li>
+                            <li><a href="{{route('blog.index')}}">Blog</a></li>
                           </ul>
                        </div>
                        <div class="col-lg-2 col-md-12  d-none d-lg-block text-right">
