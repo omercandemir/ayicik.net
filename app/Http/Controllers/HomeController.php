@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function about()
     {
         $settings = Settings::first();
-        $team   = User::where(['type' => 1, 'type' => 2])->get();
+        $team   = User::where('type', 1)->orWhere('type', 2)->get();
         return view('about', [
             'settings'  => $settings,
             'team'      => $team,

@@ -114,7 +114,7 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="team layout-1 sm-mb-35px">
                         <div class="img-out">
-                            <img src="assets/img/team-1.jpg" alt="">
+                            <img src="{{asset('assets/img/teddyBear.png')}}" alt="{{$user->name}}">
                         </div>
                         <h2 class="name">{{$user->name}}</h2>
                         <div class="dis">{{$user->job}}</div>
