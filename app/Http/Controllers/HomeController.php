@@ -8,6 +8,7 @@ use App\Models\Who;
 use App\Models\Feedback;
 use App\Models\Blog;
 use App\Models\Settings;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -30,8 +31,10 @@ class HomeController extends Controller
     public function about()
     {
         $settings = Settings::first();
+        $team   = User::where(['type' => 1, 'type' => 2])->get();
         return view('about', [
             'settings'  => $settings,
+            'team'      => $team,
         ]);
     }
 }

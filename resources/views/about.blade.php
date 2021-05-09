@@ -109,52 +109,18 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
-
-            <div class="col-lg-3 col-md-6">
-                <div class="team layout-1 sm-mb-35px">
-                    <div class="img-out">
-                        <img src="assets/img/team-1.jpg" alt="">
+            @foreach ($team as $user)
+                <div class="col-lg-3 col-md-6">
+                    <div class="team layout-1 sm-mb-35px">
+                        <div class="img-out">
+                            <img src="assets/img/team-1.jpg" alt="">
+                        </div>
+                        <h2 class="name">{{$user->name}}</h2>
+                        <div class="dis">{{$user->job}}</div>
                     </div>
-                    <h2 class="name">Hamam Alshafee</h2>
-                    <div class="dis">Software Developer</div>
                 </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-6">
-                <div class="team layout-1 sm-mb-35px">
-                    <div class="img-out">
-                        <img src="assets/img/team-2.jpg" alt="">
-                    </div>
-                    <h2 class="name">Adil Alsaeed</h2>
-                    <div class="dis">Software Developer</div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-6">
-                <div class="team layout-1 sm-mb-35px">
-                    <div class="img-out">
-                        <img src="assets/img/team-3.jpg" alt="">
-                    </div>
-                    <h2 class="name">Safa Ali</h2>
-                    <div class="dis">Software Developer</div>
-                </div>
-            </div>
-
-
-            <div class="col-lg-3 col-md-6">
-                <div class="team layout-1 sm-mb-35px">
-                    <div class="img-out">
-                        <img src="assets/img/team-4.jpg" alt="">
-                    </div>
-                    <h2 class="name">Marwa Ahmed</h2>
-                    <div class="dis">Software Developer</div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
     </div>
 </section>
