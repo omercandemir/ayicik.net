@@ -25,7 +25,7 @@
 
             <div class="col-lg-3 col-md-6">
                 <div class="nile-widget widget_nav_menu sm-mb-45px wow fadeInUp" data-wow-delay=".4s">
-                    <h2 class="title">Site Pages</h2>
+                    <h2 class="title">Hızlı Menü</h2>
                     <ul class="footer-menu">
                         <li><a href="#about">Hakkımızda</a></li>
                         <li><a href="#">Ekibe Katıl</a></li>
