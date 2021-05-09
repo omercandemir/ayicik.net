@@ -55,7 +55,7 @@
                           <ul id="menu-main" class="nav-menu float-xl-left text-lg-center link-padding-tb-25px dropdown-light">
                             <li><a href="{{route('home.index')}}">Anasayfa</a></li>
                             <li><a href="{{route('project.index')}}">Projeler</a></li>
-                            <li><a href="#">Hakkımızda</a></li>
+                            <li><a href="{{route('home.about')}}">Hakkımızda</a></li>
                             <li><a href="{{route('blog.index')}}">Blog</a></li>
                           </ul>
                        </div>

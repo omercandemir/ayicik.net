@@ -17,6 +17,8 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('about', [HomeController::class, 'about'])->name('home.about');
+
 Route::get('blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('blog/{slug}', [BlogController::class, 'show'])->name('blog.detail');
 Route::get('blog/category/{slug}', [CategoryController::class, 'showBlog'])->name('blog.category');

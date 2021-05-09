@@ -26,4 +26,12 @@ class HomeController extends Controller
             'settings'  => $settings,
         ]);
     }
+
+    public function about()
+    {
+        $settings = Settings::first();
+        return view('about', [
+            'settings'  => $settings,
+        ]);
+    }
 }
