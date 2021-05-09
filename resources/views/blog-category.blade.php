@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('title')
-    Tüm Yazılar | Ayicik.Net
+{{str_replace("-", " ", Request::segment(3))}} | Ayicik.Net
 @endsection
 @section('content')
 <div class="page-title layout-1">
     <div class="container clearfix">
-        <h1>Tüm Yazılar</h1>
+        <h1>{{str_replace("-", " ", Request::segment(3))}}</h1>
         <ul class="breadcrumbs">
             <li><a href="{{route('home.index')}}">Anasayfa</a></li>
             <li class="active">Blog Listesi</li>
@@ -19,11 +19,11 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
-                    @foreach ($blogs as $blog)
+                    @foreach ($categories as $category)
                         <div class="col-lg-6 col-md-6">
                             <div class="firo-blog-entry layout-1 margin-bottom-35px">
                                 <div class="img-in">
-                                    <img src="{{asset($blog->image)}}" alt="{{$blog->title}}">
+                                    <img src="{{asset($category->image)}}" alt="{{$category->title}}">
                                     <!--  Social -->
                                     <ul class="social-media">
                                         <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -33,13 +33,13 @@
                                     </ul>
                                     <!-- // Social -->
                                 </div>
-                                @if ($blog->blogDetail == null)
+                                @if ($category->blogDetail == null)
                                 @else
-                                    <div class="cats"><a href="#">{{$blog->blogDetail->title}}</a></div>
+                                    <div class="cats"><a href="#">{{$category->blogDetail->title}}</a></div>
                                 @endif
-                                <a href="{{route('blog.detail', $blog->slug)}}" class="title font-2">{{$blog->title}}</a>
-                                <p>@if (strlen($blog->content) > 85) {{substr($blog->content, 0, 84)}}.... @else {{$blog->content}} @endif</p>
-                                <a href="{{route('blog.detail', $blog->slug)}}" class="read_more">Detaylar</a>
+                                <a href="{{route('blog.detail', $category->slug)}}" class="title font-2">{{$category->title}}</a>
+                                <p>@if (strlen($category->content) > 85) {{substr($category->content, 0, 84)}}.... @else {{$category->content}} @endif</p>
+                                <a href="{{route('blog.detail', $category->slug)}}" class="read_more">Detaylar</a>
                             </div>
                         </div>
                     @endforeach
@@ -47,7 +47,7 @@
                 <!-- pagination -->
                 <div class="margin-tb-30px">
                     <ul class="pagination pagination-md pagination-style-1 color">
-                        {{$blogs->onEachSide(1)->links()}}
+                        {{$categories->onEachSide(1)->links()}}
                     </ul>
                 </div>
                 <!-- // pagination -->
@@ -57,8 +57,8 @@
                     <div class="nile-widget layout-1 widget_categories">
                         <div class="title font-2 text-main-color">Kategoriler</div>
                         <ul>
-                            @foreach ($categories as $category)
-                                <li><a href="{{route('blog.category', $category->slug)}}">{{$category->title}}</a></li>
+                            @foreach ($getCategory as $blogCategory)
+                                <li><a href="{{route('blog.category', $blogCategory->slug)}}">{{$blogCategory->title}}</a></li>
                             @endforeach
                         </ul>
                     </div>
