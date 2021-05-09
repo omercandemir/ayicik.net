@@ -23,7 +23,6 @@ class CategoryController extends Controller
         return view('blog-category', [
             'settings'   => $settings,
             'categories' => $categories,
-            'blogCategories' => $blogCategories,
             'getCategory'    => $getCategory,
         ]);
         
@@ -33,14 +32,16 @@ class CategoryController extends Controller
     {
         $settings = Settings::first();
         $projectCategories = ProjectCategory::where('slug', $slug)->first();
-        $categories = Project::where('category', $projectCategories->id)->get();
+        $categories = Project::with('blogDetail')->where('category', $projectCategories->id)->paginate(12);
+        $getCategory = ProjectCategory::get();
 
         if (!$projectCategories) {
             return abort(404);
         }
-        return view('category-detail', [
+        return view('project-category', [
             'settings'   => $settings,
             'categories' => $categories,
+            'getCategory'    => $getCategory,
         ]);
     }
 }

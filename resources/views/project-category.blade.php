@@ -1,14 +1,14 @@
 @extends('layouts.master')
 @section('title')
-    Tüm Projeler | Ayicik.Net
+{{str_replace("-", " ", Request::segment(3))}} | Ayicik.Net
 @endsection
 @section('content')
 <div class="page-title layout-1">
     <div class="container clearfix">
-        <h1>Tüm Yazılar</h1>
+        <h1>{{str_replace("-", " ", Request::segment(3))}}</h1>
         <ul class="breadcrumbs">
             <li><a href="{{route('home.index')}}">Anasayfa</a></li>
-            <li class="active">Blog Listesi</li>
+            <li class="active">Proje Listesi</li>
         </ul>
     </div>
 </div>
@@ -19,11 +19,11 @@
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
-                    @foreach ($projects as $project)
+                    @foreach ($categories as $category)
                         <div class="col-lg-6 col-md-6">
                             <div class="firo-blog-entry layout-1 margin-bottom-35px">
                                 <div class="img-in">
-                                    <img src="{{asset($project->image)}}" alt="{{$project->title}}">
+                                    <img src="{{asset($category->image)}}" alt="{{$category->title}}">
                                     <!--  Social -->
                                     <ul class="social-media">
                                         <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -33,13 +33,13 @@
                                     </ul>
                                     <!-- // Social -->
                                 </div>
-                                @if ($project->projectCategory == null)
+                                @if ($category->blogDetail == null)
                                 @else
-                                    <div class="cats"><a href="#">{{$project->projectCategory->title}}</a></div>
+                                    <div class="cats"><a href="#">{{$category->blogDetail->title}}</a></div>
                                 @endif
-                                <a href="{{route('project.detail', $project->slug)}}" class="title font-2">{{$project->title}}</a>
-                                <p>@if (strlen($project->content) > 85) {{substr($project->content, 0, 84)}}.... @else {{$project->content}} @endif</p>
-                                <a href="{{route('project.detail', $project->slug)}}" class="read_more">Detaylar</a>
+                                <a href="{{route('project.detail', $category->slug)}}" class="title font-2">{{$category->title}}</a>
+                                <p>@if (strlen($category->content) > 85) {{substr($category->content, 0, 84)}}.... @else {{$category->content}} @endif</p>
+                                <a href="{{route('project.detail', $category->slug)}}" class="read_more">Detaylar</a>
                             </div>
                         </div>
                     @endforeach
@@ -47,7 +47,7 @@
                 <!-- pagination -->
                 <div class="margin-tb-30px">
                     <ul class="pagination pagination-md pagination-style-1 color">
-                        {{$projects->onEachSide(1)->links()}}
+                        {{$categories->onEachSide(1)->links()}}
                     </ul>
                 </div>
                 <!-- // pagination -->
@@ -57,8 +57,8 @@
                     <div class="nile-widget layout-1 widget_categories">
                         <div class="title font-2 text-main-color">Kategoriler</div>
                         <ul>
-                            @foreach ($categories as $category)
-                                <li><a href="{{route('project.category', $category->slug)}}">{{$category->title}}</a></li>
+                            @foreach ($getCategory as $projectCategory)
+                                <li><a href="{{route('project.category', $projectCategory->slug)}}">{{$projectCategory->title}}</a></li>
                             @endforeach
                         </ul>
                     </div>
