@@ -23,40 +23,20 @@
                 <div class="firo-title dark text-center">
                     <div class="sub-title">Ayicik.Net</div>
                     <h2 class="title">Hakkımızda</h2>
-                    <div class="description">Responsive & Raw Multi-Purpose Multi-Page & One-Page HTML5 Template. Build whatever you like with this Template.</div>
+                    <div class="description">Farklı dallardan öğrenciler, insanlara birşeyler katmaya çalışan topluluk, fikirleri projelendiren bir ekip.</div>
                 </div>
             </div>
         </div>
-
         <div class="row">
-            <div class="col-lg-3 col-md-6 sm-mb-35px">
-                <div class="icon-text layout-1">
-                    <div class="icon"><img src="assets/icons/icon-1.svg" alt=""></div>
-                    <h3><a class="link" href="#">Responsive & Retina</a></h3>
-                    <div class="dis">We reward money-saving real estate program for home buyers…</div>
+            @foreach ($features as $feature)    
+                <div class="col-lg-3 col-md-6 sm-mb-35px">
+                    <div class="icon-text layout-1">
+                        <div class="icon"><img src="assets/icons/icon-1.svg" alt=""></div>
+                        <h3><a class="link" href="#">{{$feature->title}}</a></h3>
+                        <div class="dis">{{$feature->desc}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-mb-35px">
-                <div class="icon-text layout-1">
-                    <div class="icon"><img src="assets/icons/icon-2.svg" alt=""></div>
-                    <h3><a class="link" href="#">Sliders & Carousels</a></h3>
-                    <div class="dis">We refinance our clients as rates change quickly and…</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-mb-35px">
-                <div class="icon-text layout-1">
-                    <div class="icon"><img src="assets/icons/icon-3.svg" alt=""></div>
-                    <h3><a class="link" href="#">Clean code</a></h3>
-                    <div class="dis">Credit is a financial instrument used to help clients…</div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 sm-mb-35px">
-                <div class="icon-text layout-1">
-                    <div class="icon"><img src="assets/icons/icon-4.svg" alt=""></div>
-                    <h3><a class="link" href="#">Extensive Docs</a></h3>
-                    <div class="dis">We focus on the needs of small to middle market businesses.</div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -71,26 +51,26 @@
                 <div class="firo-title dark text-left">
                     <div class="sub-title">Ayicik.Net</div>
                     <h2 class="title">Ekibe Dahil Olmak</h2>
-                    <div class="description">Responsive & Raw Multi-Purpose Multi-Page & One-Page HTML5 Template. Build whatever you like with this Template.</div>
+                    <div class="description">Sende bu ekibin bir parçası mı olmak istiyorsun?</div>
                 </div>
                 <div class="icon-text layout-2 margin-bottom-30px clearfix">
                     <div class="icon"><img src="assets/icons/icon-5.svg" alt=""></div>
-                    <h3><a class="link" href="#">Powerful Options</a></h3>
-                    <div class="dis">We focus on the needs of small to middle market businesses.</div>
+                    <h3><a class="link" href="#">Madde I</a></h3>
+                    <div class="dis">Madde I açıklama.</div>
                 </div>
                 <div class="icon-text layout-2 margin-bottom-30px clearfix">
                     <div class="icon"><img src="assets/icons/icon-6.svg" alt=""></div>
-                    <h3><a class="link" href="#">Responsive Design</a></h3>
-                    <div class="dis">A great business plan is a foundation of every successful business</div>
+                    <h3><a class="link" href="#">Madde II</a></h3>
+                    <div class="dis">Madde II açıklama</div>
                 </div>
                 <div class="icon-text layout-2 margin-bottom-30px clearfix">
                     <div class="icon"><img src="assets/icons/icon-7.svg" alt=""></div>
-                    <h3><a class="link" href="#">Satisfied Clients</a></h3>
-                    <div class="dis">We help our clients take advantage of any investment out in the world</div>
+                    <h3><a class="link" href="#">Madde III</a></h3>
+                    <div class="dis">Madde III açıklama</div>
                 </div>
             </div>
             <div class="col-lg-5">
-                <img src="http://placehold.it/580x587" alt="">
+                <img src="{{asset('assets/img/about-1.jpg')}}" alt="Ayicik.Net">
             </div>
         </div>
     </div>

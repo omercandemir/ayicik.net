@@ -32,9 +32,11 @@ class HomeController extends Controller
     {
         $settings = Settings::first();
         $team   = User::where('type', 1)->orWhere('type', 2)->get();
+        $features = Features::get();
         return view('about', [
             'settings'  => $settings,
             'team'      => $team,
+            'features'  => $features,
         ]);
     }
 }
