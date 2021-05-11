@@ -27,7 +27,9 @@ Route::get('blog/category/{slug}', [CategoryController::class, 'showBlog'])->nam
 Route::get('project', [ProjectController::class, 'index'])->name('project.index');
 Route::get('project/{slug}', [ProjectController::class, 'show'])->name('project.detail');
 Route::get('project/category/{slug}', [CategoryController::class, 'showProject'])->name('project.category');
+
 Route::get('login', [PanelController::class, 'login'])->name('panel.login');
+Route::post('loginControl', [PanelController::class, 'loginControl'])->name('login.post');
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', [PanelController::class, 'index'])->name('panel.index');
